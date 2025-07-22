@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+/* ======================= Font ========================= */
+* {
+  font-family: "Anek Bangla", sans-serif;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'uthmani';
+  src: local('uthmani'), 
+       url('../src/assets/font/KFGQPC\ Uthmanic\ Script\ HAFS\ Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Hindi Siliguri';
+  src: local('Hindi Siliguri'), 
+       url('../src/assets/font/HindSiliguri-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ================= Max width =============== */
+
+.max_width {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 4px;
+}
+
+
+/* ================ Font ========================= */
+.font_title {
+  font-family: "Lora", serif;
+}
+.font_hindi{
+  font-family: "Hindi Siliguri", sans-serif;
+}
+.font_arabic {
+  font-family: "uthmani", serif;
+}
+.font_bangla {
+  font-family: "Anek Bangla", sans-serif;
+}
+.font_bangla_style {
+  font-family: "Atma", system-ui;
+}
+/* ======================= Font ========================= */
+
+/* ================= Small Screen no scroll ==================== */
+body.no-scroll {
+  overflow: hidden;
+}
+
+/* ========================== Review Star Color ======================= */
+.p-rating .p-rating-item.p-rating-item-active .p-rating-icon {
+  color: goldenrod !important;
+}
+
+/* ===================== CheckBox Design ==================== */
+/* Hide the default checkbox */
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px; /* Adjust the size of the checkbox */
+  height: 20px; /* Adjust the size of the checkbox */
+  border: 1px solid #685dd8; /* Border color */
+  border-radius: 20%; /* Make it round */
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+  position: relative; /* Ensure proper positioning of checkmark */
+}
+
+/* Custom styles for checked state */
+input[type="checkbox"]:checked {
+  background-color: #685dd8; /* Background color when checked */
+  border-color: #685dd8; /* Border color when checked */
+}
+
+/* Custom styles for unchecked state */
+input[type="checkbox"]:not(:checked) {
+  background-color: #fff; /* Background color when unchecked */
+  border-color: #ccc; /* Border color when unchecked */
+}
+
+/* Optional: Add a checkmark icon */
+input[type="checkbox"]::after {
+  content: "\2713"; /* Unicode checkmark symbol */
+  font-size: 14px; /* Adjust size as needed */
+  color: #fff; /* Color of the checkmark */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0; /* Hide by default */
+  transition: opacity 0.3s; /* Smooth transition */
+}
+
+/* Show the checkmark icon when checkbox is checked */
+input[type="checkbox"]:checked::after {
+  opacity: 1;
+}
+
+/* ======================= Modal Animation ================ */
+@keyframes scaleAnimation {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.02);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.scale-animation {
+  animation: scaleAnimation 1s;
+}
+
